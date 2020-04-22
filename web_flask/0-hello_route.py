@@ -4,8 +4,9 @@
 """
 
 from flask import Flask
+
+
 app = Flask("web_flask")
-app.run(host="0.0.0.0", port="5000")
 
 
 @app.route('/', strict_slashes=False)
@@ -14,3 +15,7 @@ def hello_hbnb():
     hello_hbnb function that returns a string
     """
     return 'Hello HBNB!'
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port="5000")
